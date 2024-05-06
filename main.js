@@ -1,11 +1,17 @@
+import './style.css'
+import _ from 'lodash';
+
 // Any live cell with two or three live neighbours survives.
 // Any dead cell with three live neighbours becomes a live cell.
 // All other live cells die in the next generation. Similarly, all other dead cells stay dead.
-
-let canvas = document.getElementById('my-can');
+let canvas = document.getElementById('canvas');
 canvas.width  = window.innerWidth;
 canvas.height = window.innerHeight;
 let ctx = canvas.getContext("2d");
+
+ctx.canvas.width = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
+
 ctx.stroke();
 
 const width = Math.round(1920 / 1)
